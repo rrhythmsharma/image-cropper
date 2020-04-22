@@ -1,0 +1,28 @@
+.upload-container{
+    background-color: #f0f0f0 !important;
+}
+
+.dropzone-container {
+    border: 10px dashed #eeeeee; 
+    border-radius: 10px;
+    color: #333333;
+    cursor: pointer;
+    text-align: center;
+}
+
+.drop-picture {
+    width: 160px;
+}
+
+.dropzone:focus {
+    outline: none !important;
+}
+
+.ReactCrop__image {
+    height: 400px !important;
+    width: 400px !important;
+}
+
+.min-h-150{
+    min-height: 150px !important;
+}

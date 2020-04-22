@@ -1,0 +1,16 @@
+.gallery-container{
+    background-color: #f3f7fd !important;
+    padding: 20px !important;
+}
+
+.gallery-heading {
+  position: relative;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #c7c7c7;
+  color: #474747;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 100;
+  font-weight: 400;
+  font-family:'Helvetica Neue', Arial, sans-serif;
+}
