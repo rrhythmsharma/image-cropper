@@ -44,7 +44,7 @@ class ImageCard extends React.Component {
                         </div>
                         <div>
                             <p className="m-0 card-top-heading">Size</p>
-                            <p className="card-text">{fileMetaData.size}</p>
+                            <p className="card-text">{fileMetaData.size} bytes</p>
                         </div>
                         <div>
                             <p className="m-0 card-top-heading">Type</p>

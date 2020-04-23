@@ -18,7 +18,7 @@ function Header() {
             <h4 className="" href="#0"><u>Image cropper</u></h4>
             <Nav className="ml-auto">
                 <Link className="mx-2 text-dark" to="/upload"><Button size="sm" variant="dark" to="/upload">Upload</Button>{' '}</Link>
-                <Link className="mx-2 text-dark" to="/results"><Button size="sm" variant="dark" to="/results">Results</Button>{' '}</Link>
+                <Link className="mx-2 text-dark" to="/gallery"><Button size="sm" variant="dark" to="/gallery">Gallery</Button>{' '}</Link>
             </Nav>
         </Navbar>
     )

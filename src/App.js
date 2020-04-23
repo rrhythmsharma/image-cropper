@@ -13,10 +13,6 @@ import Gallery from './Components/Gallery/Gallery.jsx';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      redirectToEditPage: false,
-      uploadedImage: null
-    }
   }
 
   render() {
@@ -30,7 +26,7 @@ class App extends React.Component {
                 <Route path="/upload">
                   <Upload />
                 </Route>
-                <Route path="/results">
+                <Route path="/gallery">
                   <Gallery />
                 </Route>
                 <Route exact path="" render={() => <Redirect to="/upload" />} />

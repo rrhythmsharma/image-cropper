@@ -2,6 +2,9 @@ import React from 'react';
 import ReactCrop from 'react-image-crop';
 import storage from "../../Firebase/Firebase";
 import Resizer from 'react-image-file-resizer';
+import {
+    Redirect
+} from "react-router-dom";
 import { Col, Button, Row, Alert } from 'react-bootstrap'
 import 'react-image-crop/dist/ReactCrop.css';
  
@@ -20,6 +23,7 @@ class Edit extends React.Component {
                 aspect: 16 / 9,
             },
             uploadingState: "",
+            uploadedSuccessfully: false,
             ImageCollection: [
                 {
                     "name": "horizontal",
@@ -160,8 +164,11 @@ class Edit extends React.Component {
         this.getFileBlob( imageURL, blob => {
             try {
                 storage.ref(`/images/${prefixName}/${prefixName}_cropped.${suffixName}`).put(blob).then(() => {
-                    this.setState({uploadingState: "" })
-                })                    
+                    this.setState({
+                        uploadingState: "",
+                        uploadedSuccessfully: true
+                    })
+                })           
             } catch {
                 this.setState({
                     uploadingState: "error"
@@ -183,7 +190,11 @@ class Edit extends React.Component {
     
     render () {       
         const { crop, croppedImageUrl, src, uploadingState} = this.state;
- 
+
+        if (this.state.uploadedSuccessfully === true) {
+            return <Redirect to='/gallery' />
+        }
+
         return (
             <Col className="mr-auto ml-auto mt-5">
                 <Row >
@@ -206,7 +217,7 @@ class Edit extends React.Component {
                         disabled={uploadingState === "uploading"}
                         onClick={uploadingState === "" ? () => this.uploadToStorage(croppedImageUrl) : null}
                         >
-                        {uploadingState === "uploading" ? 'Uploading...' : 'Upload'}
+                        {uploadingState === "uploading" ? 'Uploading all images ...' : 'Upload'}
                     </Button>
                 </Row>
                 {(uploadingState === "error") &&

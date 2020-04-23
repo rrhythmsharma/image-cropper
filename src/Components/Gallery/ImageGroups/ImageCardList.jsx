@@ -25,12 +25,11 @@ class ImageCardList extends React.Component {
         })
     }
 
-
     render() {
         const {imgStorageData} = this.state
         return (
             <div>
-                <h6 className="name-heading mt-3 ml-10">{this.props.name}</h6>
+                <h6 className="name-heading mt-3 ml-10">{this.props.index + 1}. {this.props.name}</h6>
                 <Row>
                     {imgStorageData && imgStorageData.map((imgName, index) => {
                             return <ImageCard key={index} folderName={this.props.name} name={imgName}/>

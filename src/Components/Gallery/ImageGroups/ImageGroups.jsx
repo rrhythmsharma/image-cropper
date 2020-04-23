@@ -19,8 +19,6 @@ class ImageGroups extends React.Component {
                     nameStorageData: [...this.state.nameStorageData, folderRef.name]
                 })
             })
-        }).catch(() => {
-
         })
 
     }
@@ -30,9 +28,9 @@ class ImageGroups extends React.Component {
         
         return (
             <div>
-                <h4>Uploaded images to the server</h4>
+                <h5>Showing uploaded images from server</h5>
                 {nameStorageData && nameStorageData.map((folderName, index) => {
-                        return <ImageCardList key={index} name={folderName} />
+                        return <ImageCardList key={index} index={index} name={folderName} />
                     })
                 }
             </div>
