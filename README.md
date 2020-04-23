@@ -1,6 +1,5 @@
-# site is live here, Please go check out
-
-https://hopeful-noether-5b42e5.netlify.app
+# Site is live 
+## https://hopeful-noether-5b42e5.netlify.app
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
