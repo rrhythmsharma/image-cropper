@@ -8,7 +8,7 @@ import {
 import './App.css';
 import Header from './Components/Header/Header.jsx';
 import Upload from './Components/Upload/Upload.jsx';
-import Results from './Components/Results/Results.jsx';
+import Gallery from './Components/Gallery/Gallery.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -31,7 +31,7 @@ class App extends React.Component {
                   <Upload />
                 </Route>
                 <Route path="/results">
-                  <Results />
+                  <Gallery />
                 </Route>
                 <Route exact path="" render={() => <Redirect to="/upload" />} />
               </Switch>
